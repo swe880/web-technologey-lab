@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION-FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="GET" style="background-color: blanchedalmond;">
+        <fieldset>
+            <legend>PRODUCT INQUIRY DETAILS</legend>
+        <table border="3">
+               <tr>
+                   <td>NAME</td>
+                   <td colspan="2"><input type="text"></td>
+               </tr>
+               <tr>
+                   <td>Date of birth</td>
+                   <td colspan="2"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td colspan="2">
+                        <input type="radio" id="male">
+                       <label for="male">male</label>
+                       <input type="radio" id="female">
+                       <label for="female">female</label> </td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td colspan="2"><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Mobile-no</td>
+                    <td colspan="2"><input type="text"  pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
+                </tr>
+                <tr>
+                    <td>Delivery address</td>
+                    <td colspan="2"><textarea name="" id="" cols="15" rows="2"></textarea></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td colspan="2"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td colspan="2"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Products interested</td>
+                    <td colspan="2"> <label for="items">Choose a item: </label>
+                        <select name="items" id="items" size="1">
+                            <option value="fridge">Fridge</option>
+                            <option value="iron box">iron box</option>
+                            <option value="machine">machine</option>
+                            <option value="AC">AC</option>
+                            <option value="oven">oven</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Purchase mode</td>
+                    <td colspan="2">
+                        <select name="mode" id="mode" size="1">
+                            <option value="online">Fridge</option>
+                            <option value="off line">off line</option>
+                            <option value="EMI">EMI</option>
+                        </select>
+                    </td>
+                </tr>
+        </table>
+        </fieldset>
+    </form>
+</body>
+</html>
