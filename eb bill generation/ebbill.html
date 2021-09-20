@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function f0(){
+      
+           var a= select.item[select.item.selectedIndex].text;
+           var c_units=document.getElementById("t2").value;
+           var result;
+
+                   if(a=="Domestic"){
+                             if(c_units<=100){
+                                   result=c_units*0+0;
+                                   document.getElementById("ans").innerHTML =("Your Amount Rs: "+result);
+                             }else if(c_units<=200){
+                                 result =(100*0)+((c_units-100)*1.50)+20.0;
+                                 document.getElementById("ans").innerHTML =("Your Amount Rs: "+result);
+                             }else if(c_units<=500){
+                                 result=(100*0)+(100*2.00)+((c_units-200)*3.00)+30;
+                                 document.getElementById("ans").innerHTML =("Your Amount Rs: "+result);
+                             }else{
+                                 result=(100*0)+(100*3.50)+(300*4.60)+((c_units-500)*6.60)+50;
+                                 document.getElementById("ans").innerHTML =("Your Amount Rs: "+result);
+                             }
+
+                        
+                   }
+           
+    }
+
+
+    
+</script>
+<body>
+    <div class="header">
+        <table width="100%" style="padding-left: 140px;padding-top: 20px;padding-bottom: 70px;">
+            <tr>
+                <td> <img src="bil.png" alt="" style="left: -40px;"></td>
+                <td><img src="ebs.jpg." alt="" width="190"></td>
+            </tr>
+        </table>
+       
+        
+         
+    </div>
+        <br><br>   
+           
+    <section>
+        <div class="box">
+            <div class="head" >
+                <ul style="list-style: none; margin-left:80px;">
+                    <li style=" display: inline; padding-right:5em">Home</li>
+                    <li style=" display: inline; padding-right:5em">FAQ</li>
+                    <li style=" display: inline;padding-right:5em">Guide lines  </li>
+                    <li style=" display: inline;padding-right:5em"> Bill Calculator  </li>
+                    <li style=" display: inline;padding-right:5em"> QuickPay</li>
+                   
+
+                </ul>
+            </div>
+                          <h4 style="text-align: center; ">Bill Calculator</h4>
+            <br>
+            <form  style="margin-left: 200px;" name="select" >
+               <table width="80%">
+                   <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Tariff Check</td> 
+                        <td> <select name="item"  onchange="f1()"  >
+                                <option value="Commercial">Commercial</option>
+                                <option value="Domestic">Domestic</option>
+                            </select></td>
+                    </tr>
+                     
+
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Billing cycle</td> 
+                        <td> <select >
+                             <option value="Commercial">Select</option>
+                             <option value="Domestic">Bi Monthly</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Constrated Load(Not Required for Domestic Tariff)</td> 
+                        <td><input type="text"> </td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Consumer Units:</td> 
+                        <td><input type="text" id="t2" placeholder="enter units"> </td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">KVAH(Not required for "Domestic Tariff)</td> 
+                        <td><input type="text"> </td>
+                    </tr>
+
+               </table>    
+            </form>
+             
+                 
+            <br><br>
+             <button id="btn1" onclick="f0()"> Calculate</button>
+
+             <br><br><br>
+             <div class="out">
+                <p id="ans" style="text-align: center;"> WELCOME TNEB CALCULATION</p>
+             </div>
+           
+
+             <br><br><br>
+            <div class="head" >
+                      <p style="text-align: center;">CopyRight @ 2013.Tamilnadu Generation and Distribution Corporation Limitted</p>
+                      <p style="text-align: center;">This Website is best viewed in EB 8+,Firefox 3+ and Google Chrom 3+ @ 1024 x 768 resolution</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
