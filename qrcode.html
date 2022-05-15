@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="all" href="subi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="shortcut icon" type="image" href="./icons8_Venmo_100px_3.png">
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name=="swetha" && password=="swe123"){  
+  window.open("file:///C:/Users/sweth/OneDrive/Desktop/successfull.html"); 
+  
+}else {  
+  window.open("failure.html");  
+    
+  }  
+}  
+</script>  
+   </head>
+<body>
+  <div class="container">
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form name=myform action="Login" method="POST"onsubmit="return validateform()" >
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="text" name="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip"><a href="register.html">Register now</a></label></div>
+            </div>
+        </form>
+      </div>
+</body>
+</html>
